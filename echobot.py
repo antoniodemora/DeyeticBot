@@ -88,8 +88,10 @@ def echo(bot):
                 'Te la papeas toda, %s',
             )
 
-            if sender.id == 13872946:
+            if sender.id == 13872946: # Eder Negro
                 message = "Sacate por ahi Eder, deja de andar cagando el palo!"
+            elif sender.id == 15969040: # El Xino
+                message = "A sus ordenes, jefecito"
             else:
                 message = random.choice(messages) % sender.first_name
 
