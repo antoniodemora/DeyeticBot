@@ -72,9 +72,22 @@ def echo(bot):
                 'A veces dices cosas chidas, a veces la cagas, %s',
                 'Tu madre no se sentiria muy orgullosa de escuchar esto, %s',
                 '%s, eres una pobre persona falta de amor...',
-                '%s, puedes irte muy lejos, alla por donde da la vuelta el viento'
+                '%s, puedes irte muy lejos, alla por donde da la vuelta el viento',
+                'Mejor hazte una chaquetota, %s',
+                '%s, Ahorita no joven',
+                'Puta madre, deja de joder %s',
+                'A ti te dejaron caer de bebe, verdad %s?',
+                'Buena esa %s, deja la anoto en mi maquina de escribir invisible',
+                'Tu te escapaste del festival del queso, verdad %s?',
+                'Mejor vamos a la quebradita, %s',
+                'Vamos por unas frias, %s',
+                'Un tekilita, %s?',
+                'Chupa mi trascero de metal, %s',
+                'Mejor invita las cheves, %s',
+                'Por que no eres un ser humano normal, %s?',
+                'Te la papeas toda, %s',
             )
-       
+
             message = random.choice(messages) % sender.first_name
             if sender.id == 13872946:
                 message = "Sacate por ahi Eder, deja de andar cagando el palo!"
