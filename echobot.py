@@ -88,9 +88,11 @@ def echo(bot):
                 'Te la papeas toda, %s',
             )
 
-            message = random.choice(messages) % sender.first_name
             if sender.id == 13872946:
                 message = "Sacate por ahi Eder, deja de andar cagando el palo!"
+            else:
+                message = random.choice(messages) % sender.first_name
+
             print('sender: ' + sender.first_name)
             print('sender id: ' + str(sender.id))
             print('incomming message: ' + update.message.text)
