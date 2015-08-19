@@ -82,7 +82,7 @@ def echo(bot):
                 'Mejor vamos a la quebradita, %s',
                 'Vamos por unas frias, %s',
                 'Un tekilita, %s?',
-                'Chupa mi trascero de metal, %s',
+                'Chupa mi tracero de metal, %s',
                 'Mejor invita las cheves, %s',
                 'Por que no eres un ser humano normal, %s?',
                 'Te la papeas toda, %s',
