@@ -46,7 +46,6 @@ def main():
 
     while True:
         echo(bot)
-        time.sleep(3)
 
 
 def echo(bot):
