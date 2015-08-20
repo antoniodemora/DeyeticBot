@@ -85,6 +85,7 @@ def echo(bot):
                 'Mejor invita las cheves, %s',
                 'Por que no eres un ser humano normal, %s?',
                 'Te la papeas toda, %s',
+                'Tu que sabes de la vida, si nunca te ha besado un policia, %s?',
             )
 
             if sender.id == 13872946: # Eder Negro
