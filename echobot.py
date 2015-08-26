@@ -86,6 +86,7 @@ def echo(bot):
                 'Por que no eres un ser humano normal, %s?',
                 'Te la papeas toda, %s',
                 'Tu que sabes de la vida, si nunca te ha besado un policia, %s?',
+                'Tienes la cara como una bola de pozol con un madrazo, %s'
             )
 
             if sender.id == 13872946: # Eder Negro
