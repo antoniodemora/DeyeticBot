@@ -93,8 +93,13 @@ def echo(bot):
                 message = "Sacate por ahi Eder, deja de andar cagando el palo!"
             elif sender.id == 15969040: # El Xino
                 message = "A sus ordenes, jefecito"
-            elif sender.id == 66747007:
-                message = 'Tienes pinta de mayate, Daniel'
+            elif sender.id == 66747007: # Daniel
+                message = random.choice(
+                    (
+                        'Tienes pinta de mayate, Daniel',
+                        'Ya estoy hasta el tushul de tus mamadas, Daniel'
+                    )
+                )
             else:
                 message = random.choice(messages) % sender.first_name
 
