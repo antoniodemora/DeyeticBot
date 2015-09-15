@@ -37,7 +37,7 @@ def main():
     # Telegram Bot Authorization Token
     bot = telegram.Bot(settings.TOKEN)
 
-    message = 'Ya regreseee putitos!'
+    message = 'Ya regreseee putit@s!'
     chat_id = -29051226
     bot.sendMessage(chat_id=chat_id,text=message)
 
@@ -62,6 +62,7 @@ def echo(bot):
             chat_id = update.message.chat_id
             sender = update.message.from_user  # ['from']['first_name']
             # message = update.message.text.encode('utf-8')
+
 
             messages = (
                 '¡%s Olachiot!',
@@ -97,7 +98,7 @@ def echo(bot):
                 '¿Un tequilita, %s?',
                 'Vamos por unas frías, %s',
                 'Ya ponte a programar, %s',
-
+                'Ya verga, cálmate!, %s',
             )
             try:
                 if sender.id == 13872946:  # Eder Negro
