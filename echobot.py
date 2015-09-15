@@ -37,7 +37,7 @@ def main():
     # Telegram Bot Authorization Token
     bot = telegram.Bot(settings.TOKEN)
 
-    message = 'Ya regreseee putitos!'
+    message = 'Ya regreseee putit@s!'
     chat_id = -29051226
     bot.sendMessage(chat_id=chat_id,text=message)
 
@@ -60,20 +60,22 @@ def echo(bot):
         if LAST_UPDATE_ID < update.update_id:
             # chat_id is required to reply any message
             chat_id = update.message.chat_id
-            sender = update.message.from_user  # ['from']['first_name']
+            sender = update.message.from_user #['from']['first_name']
             # message = update.message.text.encode('utf-8')
 
+
             messages = (
-                '¡%s Olachiot!',
+                '%s Olachiot!',
                 '%s, Ahorita no joven',
-                '%s, ¡Ándate por ahí, despojo!',
+                '%s, Andate por ahi, despojo!',
                 '%s, eres una pobre persona falta de amor...',
-                '%s, puedes irte muy lejos, allá por donde da la vuelta el viento',
-                'A tí te dejaron caer de bebé, verdad %s?',
+                '%s, puedes irte muy lejos, alla por donde da la vuelta el viento',
+                'Menos 10 a %s y denunciad@.',
+                'A ti te dejaron caer de bebe, verdad %s?',
                 'A veces dices cosas chidas, a veces la cagas, %s',
-                'Alguien apláudale a %s, por favor',
-                'Buena esa %s, deja la anoto en mi máquina de escribir invisible',
-                '¿Caguamasé jijuelabolsa?, te hablo a tí %s',
+                'Alguien aplaudale a %s, por favor',
+                'Buena esa %s, deja la anoto en mi maquina de escribir invisible',
+                'Caguamase jijuelabolsa?, te hablo a ti %s',
                 'Chupa mi trasero de metal, %s',
                 'Come caca, %s',
                 'Como castras, %s',
@@ -81,23 +83,23 @@ def echo(bot):
                 'Deja de joder, %s',
                 'Mejor hazte una chaquetota, %s',
                 'Mejor invita las cheves, %s',
-                'Mejor vamos a La Quebradita, %s',
+                'Mejor vamos a la quebradita, %s',
                 'Neta, ya no mames %s',
-                '¿Porqué no eres un ser humano normal, %s?',
+                'Por que no eres un ser humano normal, %s?',
                 'Puta madre, deja de joder %s',
-                'Qué chingados quieres, %s?',
+                'Que chingados quieres, %s?',
                 'Que crees que tengo tiempo para tus pendejadas, %s?',
                 'Sacate por ahí, %s',
                 'Si tuviera un dolar por cada vez que dices una pendejada asi... %s',
                 'Te la papeas toda, %s',
-                'Tienes la cara como una bola de pozol con un madrazo, %s',
-                'Tu madre no se sentiría muy orgullosa de escuchar esto, %s',
-                '¿Tu que sabes de la vida, si nunca te ha besado un policía, %s?',
-                '¿Tu te escapaste del festival del queso, verdad %s?',
-                '¿Un tequilita, %s?',
-                'Vamos por unas frías, %s',
-                'Ya ponte a programar, %s',
-
+                'Tienes la cara como una bola de pozol con un madrazo, %s'
+                'Tu madre no se sentiria muy orgullosa de escuchar esto, %s',
+                'Tu que sabes de la vida, si nunca te ha besado un policia, %s?',
+                'Tu te escapaste del festival del queso, verdad %s?',
+                'Un tekilita, %s?',
+                'Vamos por unas frias, %s',
+                'Ya ponte a programar, %s'
+                'Ya verga calmate!, %s',
             )
             try:
                 if sender.id == 13872946:  # Eder Negro
