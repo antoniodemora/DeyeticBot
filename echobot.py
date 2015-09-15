@@ -64,16 +64,16 @@ def echo(bot):
             # message = update.message.text.encode('utf-8')
 
             messages = (
-                '%s Olachiot!',
+                '¡%s Olachiot!',
                 '%s, Ahorita no joven',
-                '%s, Andate por ahi, despojo!',
+                '%s, ¡Ándate por ahí, despojo!',
                 '%s, eres una pobre persona falta de amor...',
-                '%s, puedes irte muy lejos, alla por donde da la vuelta el viento',
-                'A ti te dejaron caer de bebe, verdad %s?',
+                '%s, puedes irte muy lejos, allá por donde da la vuelta el viento',
+                'A tí te dejaron caer de bebé, verdad %s?',
                 'A veces dices cosas chidas, a veces la cagas, %s',
-                'Alguien aplaudale a %s, por favor',
-                'Buena esa %s, deja la anoto en mi maquina de escribir invisible',
-                'Caguamase jijuelabolsa?, te hablo a ti %s',
+                'Alguien apláudale a %s, por favor',
+                'Buena esa %s, deja la anoto en mi máquina de escribir invisible',
+                '¿Caguamasé jijuelabolsa?, te hablo a tí %s',
                 'Chupa mi trasero de metal, %s',
                 'Come caca, %s',
                 'Como castras, %s',
@@ -81,56 +81,65 @@ def echo(bot):
                 'Deja de joder, %s',
                 'Mejor hazte una chaquetota, %s',
                 'Mejor invita las cheves, %s',
-                'Mejor vamos a la quebradita, %s',
+                'Mejor vamos a La Quebradita, %s',
                 'Neta, ya no mames %s',
-                'Por que no eres un ser humano normal, %s?',
+                '¿Porqué no eres un ser humano normal, %s?',
                 'Puta madre, deja de joder %s',
-                'Que chingados quieres, %s?',
+                'Qué chingados quieres, %s?',
                 'Que crees que tengo tiempo para tus pendejadas, %s?',
-                'Sacate por ahi, %s',
-                'Si tuviera un dolar por cada vez que dices una pendejada asi...%s',
+                'Sacate por ahí, %s',
+                'Si tuviera un dolar por cada vez que dices una pendejada asi... %s',
                 'Te la papeas toda, %s',
-                'Tienes la cara como una bola de pozol con un madrazo, %s'
-                'Tu madre no se sentiria muy orgullosa de escuchar esto, %s',
-                'Tu que sabes de la vida, si nunca te ha besado un policia, %s?',
-                'Tu te escapaste del festival del queso, verdad %s?',
-                'Un tekilita, %s?',
-                'Vamos por unas frias, %s',
+                'Tienes la cara como una bola de pozol con un madrazo, %s',
+                'Tu madre no se sentiría muy orgullosa de escuchar esto, %s',
+                '¿Tu que sabes de la vida, si nunca te ha besado un policía, %s?',
+                '¿Tu te escapaste del festival del queso, verdad %s?',
+                '¿Un tequilita, %s?',
+                'Vamos por unas frías, %s',
                 'Ya ponte a programar, %s',
 
             )
+            try:
+                if sender.id == 13872946:  # Eder Negro
+                    message = unicode("Sácate por ahí Eder, deja de andar cagando el palo!", 'utf-8', 'replace')
+                elif sender.id == 15969040:  # El Xino
+                    message = unicode("A sus órdenes, jefecito", 'utf-8', 'replace')
+                elif sender.id == 66747007:  # Daniel
+                    message = unicode(random.choice(
+                        (
+                            'Tienes pinta de mayate, Daniel',
+                            'Ya estoy hasta el tushul de tus mamadas, Daniel',
+                            'Buen intento maquinola pero acabo de denunciarte.',
+                            'Mirá como te denuncio papu!',
+                            'Deja de romperme, Daniel'
 
-            if sender.id == 13872946:  # Eder Negro
-                message = "Sacate por ahi Eder, deja de andar cagando el palo!"
-            elif sender.id == 15969040:  # El Xino
-                message = "A sus ordenes, jefecito"
-            elif sender.id == 66747007:  # Daniel
-                message = random.choice(
-                    (
-                        'Tienes pinta de mayate, Daniel',
-                        'Ya estoy hasta el tushul de tus mamadas, Daniel',
-                        'Buen intento maquinola pero acabo de denunciarte.',
-                        'Mira como te denuncio papu!',
+                        )
+                    ), 'utf-8', 'replace')
+                else:
+                    index = random.randrange(len(messages) - 1)  # Esto es para saber en qué inice se rompe.
+                    print('message index: ' + str(index))
+                    message = unicode(messages[index], 'utf-8') % sender.first_name
 
-                    )
-                )
-            else:
-                message = random.choice(messages) % sender.first_name
+                print('sender: ' + sender.first_name)
+                print('sender id: ' + str(sender.id))
+                print('chat ID: ' + str(chat_id))
+                print('incomming message: ' + update.message.text)
+                print('outcoming message: ' + message)
+                print('-' * 80)
 
-            print('sender: ' + sender.first_name)
-            print('sender id: ' + str(sender.id))
-            print('chat ID: ' + str(chat_id))
-            print('incomming message: ' + update.message.text)
-            print('outcoming message: ' + message)
-            print('-' * 80)
+                if (message):
+                    # Reply the message
+                    bot.sendMessage(chat_id=chat_id,
+                                    text=message)
 
-            if (message):
-                # Reply the message
+                    # Updates global offset to get the new updates
+                    LAST_UPDATE_ID = update.update_id
+            except Exception, e:
+                print('#' * 80)
+                print('me he roto: ' + e.message)
+                print('#' * 80)
                 bot.sendMessage(chat_id=chat_id,
-                                text=message)
-
-                # Updates global offset to get the new updates
-                LAST_UPDATE_ID = update.update_id
+                    text='Me rompí x_x')
 
 
 if __name__ == '__main__':
