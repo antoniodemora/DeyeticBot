@@ -60,9 +60,8 @@ def echo(bot):
         if LAST_UPDATE_ID < update.update_id:
             # chat_id is required to reply any message
             chat_id = update.message.chat_id
-            sender = update.message.from_user #['from']['first_name']
+            sender = update.message.from_user  # ['from']['first_name']
             # message = update.message.text.encode('utf-8')
-
 
             messages = (
                 '%s Olachiot!',
@@ -101,11 +100,11 @@ def echo(bot):
 
             )
 
-            if sender.id == 13872946: # Eder Negro
+            if sender.id == 13872946:  # Eder Negro
                 message = "Sacate por ahi Eder, deja de andar cagando el palo!"
-            elif sender.id == 15969040: # El Xino
+            elif sender.id == 15969040:  # El Xino
                 message = "A sus ordenes, jefecito"
-            elif sender.id == 66747007: # Daniel
+            elif sender.id == 66747007:  # Daniel
                 message = random.choice(
                     (
                         'Tienes pinta de mayate, Daniel',
@@ -123,7 +122,7 @@ def echo(bot):
             print('chat ID: ' + str(chat_id))
             print('incomming message: ' + update.message.text)
             print('outcoming message: ' + message)
-            print('-'*80)
+            print('-' * 80)
 
             if (message):
                 # Reply the message
