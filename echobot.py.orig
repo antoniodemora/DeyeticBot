@@ -60,21 +60,36 @@ def echo(bot):
         if LAST_UPDATE_ID < update.update_id:
             # chat_id is required to reply any message
             chat_id = update.message.chat_id
+<<<<<<< Updated upstream
             sender = update.message.from_user  # ['from']['first_name']
             # message = update.message.text.encode('utf-8')
-
+=======
+            sender = update.message.from_user #['from']['first_name']
+            #message = update.message.text.encode('utf-8')
+>>>>>>> Stashed changes
 
             messages = (
                 '¡%s Olachiot!',
                 '%s, Ahorita no joven',
                 '%s, ¡Ándate por ahí, despojo!',
                 '%s, eres una pobre persona falta de amor...',
+<<<<<<< Updated upstream
                 '%s, puedes irte muy lejos, allá por donde da la vuelta el viento',
                 'A tí te dejaron caer de bebé, verdad %s?',
                 'A veces dices cosas chidas, a veces la cagas, %s',
                 'Alguien apláudale a %s, por favor',
                 'Buena esa %s, deja la anoto en mi máquina de escribir invisible',
                 '¿Caguamasé jijuelabolsa?, te hablo a tí %s',
+=======
+                '%s, puedes irte muy lejos, alla por donde da la vuelta el viento',
+                'Menos 10 a %s y denunciad@.',
+                'A ti te dejaron caer de bebe, verdad %s?',
+                'A veces dices cosas chidas, a veces la cagas, %s',
+                'Aleluya por tus mamadas, %s',
+                'Alguien aplaudale a %s, por favor',
+                'Buena esa %s, deja la anoto en mi maquina de escribir invisible',
+                'Caguamase jijuelabolsa?, te hablo a ti %s',
+>>>>>>> Stashed changes
                 'Chupa mi trasero de metal, %s',
                 'Come caca, %s',
                 'Como castras, %s',
@@ -88,6 +103,7 @@ def echo(bot):
                 'Puta madre, deja de joder %s',
                 'Qué chingados quieres, %s?',
                 'Que crees que tengo tiempo para tus pendejadas, %s?',
+<<<<<<< Updated upstream
                 'Sacate por ahí, %s',
                 'Si tuviera un dolar por cada vez que dices una pendejada asi... %s',
                 'Te la papeas toda, %s',
@@ -98,7 +114,7 @@ def echo(bot):
                 '¿Un tequilita, %s?',
                 'Vamos por unas frías, %s',
                 'Ya ponte a programar, %s',
-                'Ya verga, cálmate!, %s',
+
             )
             try:
                 if sender.id == 13872946:  # Eder Negro
@@ -120,12 +136,53 @@ def echo(bot):
                     index = random.randrange(len(messages) - 1)  # Esto es para saber en qué inice se rompe.
                     print('message index: ' + str(index))
                     message = unicode(messages[index], 'utf-8') % sender.first_name
+=======
+                'Sacate por ahi, %s',
+                'Si tuviera un dolar por cada vez que dices una pendejada asi... %s',
+                'Te la papeas toda, %s',
+                'Tienes la cara como una bola de pozol con un madrazo, %s'
+                'Tu madre no se sentiria muy orgullosa de escuchar esto, %s',
+                'Tu que sabes de la vida, si nunca te ha besado un policia, %s?',
+                'Tu te escapaste del festival del queso, verdad %s?',
+                'Un tekilita, %s?',
+                'Vamos por unas frias, %s',
+                'Ya ponte a programar, %s'
+                'Ya verga calmate!, %s',
+            )
+
+            if sender.id == 13872946: # Eder Negro
+                message = "Sacate por ahi Eder, deja de andar cagando el palo!"
+            elif sender.id == 15969040: # El Xino
+                message = "A sus ordenes, jefecito"
+            elif sender.id == 66747007: # Daniel
+                message = random.choice(
+                    (
+                        'Tienes pinta de mayate, Daniel',
+                        'Ya estoy hasta el tushul de tus mamadas, Daniel',
+                        'Buen intento maquinola pero acabo de denunciarte.',
+                        'Mira como te denuncio papu!',
+                    )
+                )
+            else:
+                message = random.choice(messages) % sender.first_name
+
+
+            # print('sender: ' + sender.first_name)
+            # print('sender id: ' + str(sender.id))
+            # print('chat ID: ' + str(chat_id))
+            # print('incomming message: ' + update.message.text)
+            # print('outcoming message: ' + message)
+            # print('-'*80)
+
+            if (message):
+>>>>>>> Stashed changes
 
                 print('sender: ' + sender.first_name)
                 print('sender id: ' + str(sender.id))
                 print('chat ID: ' + str(chat_id))
                 print('incomming message: ' + update.message.text)
                 print('outcoming message: ' + message)
+<<<<<<< Updated upstream
                 print('-' * 80)
 
                 if (message):
@@ -141,6 +198,15 @@ def echo(bot):
                 print('#' * 80)
                 bot.sendMessage(chat_id=chat_id,
                     text='Me rompí x_x')
+=======
+                print('-'*80)
+
+                # Reply the message
+                bot.sendMessage(chat_id=chat_id,text=message)
+
+                # Updates global offset to get the new updates
+                LAST_UPDATE_ID = update.update_id
+>>>>>>> Stashed changes
 
 
 if __name__ == '__main__':
