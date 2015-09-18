@@ -99,6 +99,9 @@ def echo(bot):
                 'Vamos por unas frías, %s',
                 'Ya ponte a programar, %s',
                 'Ya verga, cálmate!, %s',
+                'Lo que pienses es una de las 1500 cosas que me vienen valiendo verga, %s',
+                'Te via machetiá diantre %s',
+
             )
             try:
                 if sender.id == 13872946:  # Eder Negro
